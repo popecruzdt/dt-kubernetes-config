@@ -1,6 +1,6 @@
 {
   "id": "8538306972793880283",
-  "name": "eks-production",
+  "name": "${managementzone_name}",
   "rules": [
     {
       "type": "PROCESS_GROUP",
@@ -19,7 +19,7 @@
           "comparisonInfo": {
             "type": "STRING",
             "operator": "EQUALS",
-            "value": "production",
+            "value": "${namespace}",
             "negate": false,
             "caseSensitive": false
           }
@@ -31,7 +31,7 @@
           "comparisonInfo": {
             "type": "STRING",
             "operator": "EQUALS",
-            "value": "tpc-demo-eks",
+            "value": "${kubernetes_cluster_name}",
             "negate": false,
             "caseSensitive": false
           }
@@ -43,7 +43,7 @@
           "comparisonInfo": {
             "type": "CLOUD_TYPE",
             "operator": "EQUALS",
-            "value": "EC2",
+            "value": "${kubernetes_cloud_type}",
             "negate": false
           }
         }
