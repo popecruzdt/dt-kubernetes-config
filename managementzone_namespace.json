@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      0
+    ],
+    "clusterVersion": "1.195.115.20200616-204130"
+  },
+  "id": "8538306972793880283",
+  "name": "eks-production",
+  "rules": [
+    {
+      "type": "PROCESS_GROUP",
+      "enabled": true,
+      "propagationTypes": [
+        "PROCESS_GROUP_TO_HOST",
+        "PROCESS_GROUP_TO_SERVICE"
+      ],
+      "conditions": [
+        {
+          "key": {
+            "attribute": "PROCESS_GROUP_PREDEFINED_METADATA",
+            "dynamicKey": "KUBERNETES_NAMESPACE",
+            "type": "PROCESS_PREDEFINED_METADATA_KEY"
+          },
+          "comparisonInfo": {
+            "type": "STRING",
+            "operator": "EQUALS",
+            "value": "production",
+            "negate": false,
+            "caseSensitive": false
+          }
+        },
+        {
+          "key": {
+            "attribute": "KUBERNETES_CLUSTER_NAME"
+          },
+          "comparisonInfo": {
+            "type": "STRING",
+            "operator": "EQUALS",
+            "value": "tpc-demo-eks",
+            "negate": false,
+            "caseSensitive": false
+          }
+        },
+        {
+          "key": {
+            "attribute": "HOST_CLOUD_TYPE"
+          },
+          "comparisonInfo": {
+            "type": "CLOUD_TYPE",
+            "operator": "EQUALS",
+            "value": "EC2",
+            "negate": false
+          }
+        }
+      ]
+    }
+  ]
+}
