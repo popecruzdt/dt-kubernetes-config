@@ -1,10 +1,4 @@
 {
-  "metadata": {
-    "configurationVersions": [
-      0
-    ],
-    "clusterVersion": "1.195.115.20200616-204130"
-  },
   "id": "8538306972793880283",
   "name": "eks-production",
   "rules": [
