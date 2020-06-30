@@ -6,3 +6,11 @@ This repo is a collection of JSON files designed for automating the monitoring o
 * taggingRule_kubernetes-namespace.json - Creates a tagging rule for 1 tag with a value for each Kubernetes Namespace
 * taggingRule_kubernetes-pod.json - Creates a tagging rule for 1 tag with a value for each Kubernetes Base Pod
 * dashboard_kubernetes-namespace.json - Creates a dashboard template for viewing a Kubernetes Namespace
+
+## Variables:
+### managementZone_kubernetes-namespace.json:
+* managementZone_id -> unique 64 bit identifier of management zone
+* managementZone_name -> unique name of management zone
+* kubernetes_cluster-name -> name of kubernetes cluster as configured in Dynatrace
+* kubernetes_cloud-type -> cloud type for kubernetes cluster nodes
+* kubernetes_namespace -> kubernetes namespace for management zone 
