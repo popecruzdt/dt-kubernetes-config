@@ -3,7 +3,7 @@ This repo is a collection of JSON files designed for automating the monitoring o
 
 ## Contents:
 * managementZone_kubernetes-namespace.json - Template for configuring a Management Zone for each Kubernetes Namespace
-* managementZone_kubernetes-cluster.json - Template for configuraing a Management Zone for the entire Kubernetes Cluster
+* managementZone_kubernetes-cluster.json - Template for configuring a Management Zone for the entire Kubernetes Cluster
 * taggingRule_kubernetes-namespace.json - Creates a tagging rule for 1 tag with a value for each Kubernetes Namespace
 * taggingRule_kubernetes-pod.json - Creates a tagging rule for 1 tag with a value for each Kubernetes Base Pod
 * dashboard_kubernetes-namespace.json - Creates a dashboard template for viewing a Kubernetes Namespace
