@@ -1,13 +1,13 @@
 {
-  "id": "8538306972793880283",
-  "name": "${managementzone_name}",
+  "id": "${managementZone_id}",
+  "name": "${managementZone_name}",
   "rules": [
     {
       "type": "PROCESS_GROUP",
       "enabled": true,
       "propagationTypes": [
-        "PROCESS_GROUP_TO_HOST",
-        "PROCESS_GROUP_TO_SERVICE"
+        "PROCESS_GROUP_TO_SERVICE",
+        "PROCESS_GROUP_TO_HOST"
       ],
       "conditions": [
         {
@@ -19,7 +19,7 @@
           "comparisonInfo": {
             "type": "STRING",
             "operator": "EQUALS",
-            "value": "${namespace}",
+            "value": "${kubernetes_namespace}",
             "negate": false,
             "caseSensitive": false
           }
@@ -31,7 +31,7 @@
           "comparisonInfo": {
             "type": "STRING",
             "operator": "EQUALS",
-            "value": "${kubernetes_cluster_name}",
+            "value": "${kubernetes_cluster-name}",
             "negate": false,
             "caseSensitive": false
           }
@@ -43,8 +43,46 @@
           "comparisonInfo": {
             "type": "CLOUD_TYPE",
             "operator": "EQUALS",
-            "value": "${kubernetes_cloud_type}",
+            "value": "${kubernetes_cloud-type}",
             "negate": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "CLOUD_APPLICATION_NAMESPACE",
+      "enabled": true,
+      "propagationTypes": [],
+      "conditions": [
+        {
+          "key": {
+            "attribute": "CLOUD_APPLICATION_NAMESPACE_NAME"
+          },
+          "comparisonInfo": {
+            "type": "STRING",
+            "operator": "EQUALS",
+            "value": "${kubernetes_namespace}",
+            "negate": false,
+            "caseSensitive": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "KUBERNETES_CLUSTER",
+      "enabled": true,
+      "propagationTypes": [],
+      "conditions": [
+        {
+          "key": {
+            "attribute": "KUBERNETES_CLUSTER_NAME"
+          },
+          "comparisonInfo": {
+            "type": "STRING",
+            "operator": "EQUALS",
+            "value": "${kubernetes_cluster-name}",
+            "negate": false,
+            "caseSensitive": true
           }
         }
       ]
