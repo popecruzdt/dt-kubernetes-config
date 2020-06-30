@@ -1,6 +1,6 @@
 {
-  "id": "5137a0c6-4a17-46c1-b62c-a8fdcf291f98",
-  "name": "eks-pod",
+  "id": "${taggingRule_id}",
+  "name": "${taggingRule_name}",
   "rules": [
     {
       "type": "PROCESS_GROUP",
@@ -17,7 +17,7 @@
           "comparisonInfo": {
             "type": "STRING",
             "operator": "EQUALS",
-            "value": "tpc-demo-eks",
+            "value": "${kubernetes_cluster-name}",
             "negate": false,
             "caseSensitive": false
           }
@@ -48,6 +48,17 @@
             "value": null,
             "negate": false,
             "caseSensitive": null
+          }
+        },
+        {
+          "key": {
+            "attribute": "HOST_CLOUD_TYPE"
+          },
+          "comparisonInfo": {
+            "type": "CLOUD_TYPE",
+            "operator": "EQUALS",
+            "value": "${kubernetes_cloud-type}",
+            "negate": false
           }
         }
       ]

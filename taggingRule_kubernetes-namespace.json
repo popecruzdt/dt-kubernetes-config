@@ -1,6 +1,6 @@
 {
-  "id": "834fa6ce-c080-4872-8b23-36ac989b31e6",
-  "name": "eks-namespace",
+  "id": "${taggingRule_id}",
+  "name": "${taggingRule_name}",
   "rules": [
     {
       "type": "PROCESS_GROUP",
@@ -17,7 +17,7 @@
           "comparisonInfo": {
             "type": "STRING",
             "operator": "EQUALS",
-            "value": "tpc-demo-eks",
+            "value": "${kubernetes_cluster-name}",
             "negate": false,
             "caseSensitive": false
           }
@@ -43,7 +43,7 @@
           "comparisonInfo": {
             "type": "CLOUD_TYPE",
             "operator": "EQUALS",
-            "value": "EC2",
+            "value": "${kubernetes_cloud-type}",
             "negate": false
           }
         }
