@@ -10,8 +10,8 @@
         "dashboardFilter": {
             "timeframe": "Today",
             "managementZone": {
-                "id": "${managementZone_id}",
-                "name": "${managementZone_name}"
+                "id": "${managementZone.id}",
+                "name": "${managementZone.name}"
             }
         }
     },
