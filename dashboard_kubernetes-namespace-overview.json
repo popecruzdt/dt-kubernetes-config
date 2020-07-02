@@ -417,11 +417,7 @@
                     }
                 }
             },
-            "filtersPerEntityType": {
-                "KUBERNETES_CLUSTER": {
-                    "SPECIFIC_ENTITIES": ["KUBERNETES_CLUSTER-90B1320A2410E63C"]
-                }
-            }
+            "filtersPerEntityType": {}
         }
     }, {
         "name": "Custom chart",
@@ -468,11 +464,7 @@
                     }
                 }
             },
-            "filtersPerEntityType": {
-                "KUBERNETES_CLUSTER": {
-                    "SPECIFIC_ENTITIES": ["KUBERNETES_CLUSTER-90B1320A2410E63C"]
-                }
-            }
+            "filtersPerEntityType": {}
         }
     }, {
         "name": "k8s cluster health",
@@ -578,11 +570,7 @@
                 }],
                 "resultMetadata": {}
             },
-            "filtersPerEntityType": {
-                "CLOUD_APPLICATION_NAMESPACE": {
-                    "SPECIFIC_ENTITIES": ["CLOUD_APPLICATION_NAMESPACE-04A9E9FD6F77F504"]
-                }
-            }
+            "filtersPerEntityType": {}
         }
     }, {
         "name": "Custom chart",
