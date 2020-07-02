@@ -533,7 +533,8 @@
                         "customColor": "#debbf3"
                     }
                 }
-            }
+            },
+            "filtersPerEntityType": {}
         }
     }, {
         "name": "Custom chart",
@@ -699,7 +700,8 @@
                         "customColor": "#00a1b2"
                     }
                 }
-            }
+            },
+            "filtersPerEntityType": {}
         }
     }, {
         "name": "Custom chart",
@@ -757,7 +759,8 @@
                         "customColor": "#008cdb"
                     }
                 }
-            }
+            },
+            "filtersPerEntityType": {}
         }
     }, {
         "name": "Custom chart",
