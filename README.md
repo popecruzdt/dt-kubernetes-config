@@ -18,6 +18,6 @@ This dashboard displays the most relevant information about the health, performa
   * Azure Kubernetes Service -> aks (Azure Kubernetes https://docs.microsoft.com/en-us/azure/aks/)
   * Google Kubernetes Engine -> gke (Google Kubernetes https://cloud.google.com/kubernetes-engine)
 * Configure at least (1) Management Zone in the Dynatrace environment that includes the following rules
-  * Process groups where Kubernetes namespace equals '<your namespace>' and that run on hosts where Kubernetes cluster name equals '<your kubernetes cluster name>'
-  * Cloud application namespace where Cloud application namespace name equals '<your namespace>'
-  * Kubernetes cluster on hosts where Kubernetes cluster name equals '<your kubernetes cluster name>'
+  * Process groups where Kubernetes namespace equals '*your namespace*' and that run on hosts where Kubernetes cluster name equals '*your kubernetes cluster name*'
+  * Cloud application namespace where Cloud application namespace name equals '*your namespace*'
+  * Kubernetes cluster on hosts where Kubernetes cluster name equals '*your kubernetes cluster name*'
