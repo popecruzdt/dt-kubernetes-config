@@ -1,5 +1,5 @@
 ## Kubernetes Overview
-![Kubernetes Overview](dashboard-kubernetes-namespace.png)
+![Kubernetes Overview](screenshot_dashboard-kubernetes-namespace.png)
 
 ## Summary:
 This repo is a collection of JSON files designed for automating the monitoring of Kubernetes in Dynatrace, with the BizOpsConfigurator.
