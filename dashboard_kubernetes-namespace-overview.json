@@ -1,5 +1,9 @@
 {
-    "id": "d6949908-0498-4c32-9962-8e093d1f46d4",
+  "metadata": {
+      "configurationVersions": [3],
+      "clusterVersion": "1.196.55.20200624-161048"
+  },
+  "id": "d6949908-0498-4c32-9962-8e093d1f46d4",
     "dashboardMetadata": {
         "name": "${dashboard_name}",
         "shared": true,
