@@ -1,42 +1,23 @@
+## Kubernetes Overview
 ![Kubernetes Overview](dashboard-kubernetes-namespace.png)
 
 ## Summary:
 This repo is a collection of JSON files designed for automating the monitoring of Kubernetes in Dynatrace, with the BizOpsConfigurator.
 
-## Contents:
-* managementZone_kubernetes-namespace.json - Template for configuring a Management Zone for each Kubernetes Namespace
-* managementZone_kubernetes-cluster.json - Template for configuring a Management Zone for the entire Kubernetes Cluster
-* taggingRule_kubernetes-namespace.json - Creates a tagging rule for 1 tag with a value for each Kubernetes Namespace
-* taggingRule_kubernetes-pod.json - Creates a tagging rule for 1 tag with a value for each Kubernetes Base Pod
-* dashboard_kubernetes-namespace.json - Creates a dashboard template for viewing a Kubernetes Namespace
+Developed and tested on Dynatrace v1.196.
 
-## Variables:
-### managementZone_kubernetes-namespace.json:
-* managementZone_id -> unique 64 bit identifier of management zone
-* managementZone_name -> unique name of management zone
-* kubernetes_cluster-name -> name of kubernetes cluster as configured in Dynatrace
-* kubernetes_cloud-type -> cloud type for kubernetes cluster nodes (EC2,Azure,Oracle,OpenStack,Google Cloud Platform)
-* kubernetes_namespace -> kubernetes namespace for management zone
+## Dashboards:
+### Kubernetes Namespace Overview
+This dashboard displays the most relevant information about the health, performance, and utilization of deployments within a specific Kubernetes namespace.  Designed for developers and app owners that are new to Dynatrace and need to see how pods, containers, microservices, and supporting infrastructure are performing.
 
-### managementZone_kubernetes-cluster.json:
-* managementZone_id -> unique 64 bit identifier of management zone
-* managementZone_name -> unique name of management zone
-* kubernetes_cluster-name -> name of kubernetes cluster as configured in Dynatrace
-* kubernetes_cloud-type -> cloud type for kubernetes cluster nodes (EC2,Azure,Oracle,OpenStack,Google Cloud Platform)
-
-### taggingRule_kubernetes-namespace.json:
-* taggingRule_id -> unique UUID of automatic tag
-* taggingRule_name -> unique name of automatic tag
-* kubernetes_cluster-name -> name of kubernetes cluster as configured in Dynatrace
-* kubernetes_cloud-type -> cloud type for kubernetes cluster nodes (EC2,Azure,Oracle,OpenStack,Google Cloud Platform)
-
-### taggingRule_kubernetes-pod.json:
-* taggingRule_id -> unique UUID of automatic tag
-* taggingRule_name -> unique name of automatic tag
-* kubernetes_cluster-name -> name of kubernetes cluster as configured in Dynatrace
-* kubernetes_cloud-type -> cloud type for kubernetes cluster nodes (EC2,Azure,Oracle,OpenStack,Google Cloud Platform)
-
-### dashboard_kubernetes-namespace.json
-* dashboard_name -> name to apply to the dashboard
-* managementZone_id -> unique 64 bit identifier of management zone that will be set as the default when dashboard is opened
-* managementZone_name -> unique name of management zone that will be set as the default when dashboard is opened
+## Prerequisites:
+* Identify your Kubernetes cloud type and (3) character abbreviation
+  * Kubernetes -> k8s (vanilla Kubernetes where you don't care to specify the cloud type)
+  * OpenShift -> ocp (OpenShift Container Platform https://www.openshift.com/products/container-platform)
+  * Elastic Kubernetes Service -> eks (AWS Kubernetes https://aws.amazon.com/eks/)
+  * Azure Kubernetes Service -> aks (Azure Kubernetes https://docs.microsoft.com/en-us/azure/aks/)
+  * Google Kubernetes Engine -> gke (Google Kubernetes https://cloud.google.com/kubernetes-engine)
+* Configure at least (1) Management Zone in the Dynatrace environment that includes the following rules
+  * Process groups where Kubernetes namespace equals '<your namespace>' and that run on hosts where Kubernetes cluster name equals '<your kubernetes cluster name>'
+  * Cloud application namespace where Cloud application namespace name equals '<your namespace>'
+  * Kubernetes cluster on hosts where Kubernetes cluster name equals '<your kubernetes cluster name>'
