@@ -259,7 +259,7 @@
             "height": 152
         },
         "tileFilter": {},
-        "markdown": "[pods & containers](#newprocessessummary)\n\n[k8s nodes](#newhosts)\n\n[docker](#docker)"
+        "markdown": "[pods & containers](#newprocessessummary)\n\n[${kubernetes-prefix} nodes](#newhosts)\n\n[docker](#docker)"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -471,7 +471,7 @@
             "filtersPerEntityType": {}
         }
     }, {
-        "name": "k8s cluster health",
+        "name": "${kubernetes-prefix} cluster health",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
@@ -646,7 +646,7 @@
             "filtersPerEntityType": {}
         }
     }, {
-        "name": "k8s pods and workloads",
+        "name": "${kubernetes-prefix} pods and workloads",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
