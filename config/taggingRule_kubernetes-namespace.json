@@ -1,6 +1,6 @@
 {
-  "id": "${taggingRule_id}",
-  "name": "${taggingRule_name}",
+  "id": "834fa6ce-c080-4872-8b23-36ac989b31e6",
+  "name": "k8s-namespace",
   "rules": [
     {
       "type": "PROCESS_GROUP",
@@ -34,17 +34,6 @@
             "value": null,
             "negate": false,
             "caseSensitive": null
-          }
-        },
-        {
-          "key": {
-            "attribute": "HOST_CLOUD_TYPE"
-          },
-          "comparisonInfo": {
-            "type": "CLOUD_TYPE",
-            "operator": "EQUALS",
-            "value": "${kubernetes_cloud-type}",
-            "negate": false
           }
         }
       ]
