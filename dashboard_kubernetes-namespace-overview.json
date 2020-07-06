@@ -17,7 +17,8 @@
                 "id": "${managementZone.id}",
                 "name": "${managementZone.name}"
             }
-        }
+        },
+        "tags": ["Kubernetes Monitoring", "Overview"]
     },
     "tiles": [{
         "name": "Problems",
