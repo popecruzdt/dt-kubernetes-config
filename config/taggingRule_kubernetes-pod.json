@@ -1,6 +1,6 @@
 {
   "id": "5137a0c6-4a17-46c1-b62c-a8fdcf291f98",
-  "name": "k8s-pod",
+  "name": "kubernetes-pod",
   "rules": [
     {
       "type": "PROCESS_GROUP",
@@ -10,18 +10,6 @@
         "PROCESS_GROUP_TO_SERVICE"
       ],
       "conditions": [
-        {
-          "key": {
-            "attribute": "KUBERNETES_CLUSTER_NAME"
-          },
-          "comparisonInfo": {
-            "type": "STRING",
-            "operator": "EQUALS",
-            "value": "${kubernetes_cluster-name}",
-            "negate": false,
-            "caseSensitive": false
-          }
-        },
         {
           "key": {
             "attribute": "PROCESS_GROUP_PREDEFINED_METADATA",

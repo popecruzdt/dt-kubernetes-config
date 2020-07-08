@@ -1,6 +1,6 @@
 {
   "id": "834fa6ce-c080-4872-8b23-36ac989b31e6",
-  "name": "k8s-namespace",
+  "name": "kubernetes-namespace",
   "rules": [
     {
       "type": "PROCESS_GROUP",
@@ -10,18 +10,6 @@
         "PROCESS_GROUP_TO_SERVICE"
       ],
       "conditions": [
-        {
-          "key": {
-            "attribute": "KUBERNETES_CLUSTER_NAME"
-          },
-          "comparisonInfo": {
-            "type": "STRING",
-            "operator": "EQUALS",
-            "value": "${kubernetes_cluster-name}",
-            "negate": false,
-            "caseSensitive": false
-          }
-        },
         {
           "key": {
             "attribute": "PROCESS_GROUP_PREDEFINED_METADATA",
