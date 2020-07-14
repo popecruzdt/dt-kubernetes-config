@@ -1,4 +1,4 @@
-{
+${kubernetes-prefix.value}{
   "metadata": {
       "configurationVersions": [3],
       "clusterVersion": "1.196.55.20200624-161048"
@@ -260,7 +260,7 @@
             "height": 152
         },
         "tileFilter": {},
-        "markdown": "[pods & containers](#newprocessessummary)\n\n[${kubernetes-prefix} nodes](#newhosts)\n\n[docker](#docker)"
+        "markdown": "[pods & containers](#newprocessessummary)\n\n[${kubernetes-prefix.value} nodes](#newhosts)\n\n[docker](#docker)"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
@@ -472,7 +472,7 @@
             "filtersPerEntityType": {}
         }
     }, {
-        "name": "${kubernetes-prefix} cluster health",
+        "name": "${kubernetes-prefix.value} cluster health",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
@@ -647,7 +647,7 @@
             "filtersPerEntityType": {}
         }
     }, {
-        "name": "${kubernetes-prefix} pods and workloads",
+        "name": "${kubernetes-prefix.value} pods and workloads",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
