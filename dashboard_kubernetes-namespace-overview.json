@@ -1,4 +1,4 @@
-${kubernetes-prefix.value}{
+{
   "metadata": {
       "configurationVersions": [3],
       "clusterVersion": "1.196.55.20200624-161048"
