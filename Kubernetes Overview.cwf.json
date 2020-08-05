@@ -3,7 +3,7 @@
 	"config": {
 		"persona": ["a001", "a002", "a003"],
 		"usecase": "a008",
-		"workflowName": "Kubernetes Overview",
+		"workflowName": "Kubernetes Namespace Overview",
 		"githubUser": "popecruzdt",
 		"githubRepo": "dt-kubernetes-config",
 		"githubPath": "",
